@@ -1,4 +1,3 @@
-
 /* ====== RESET / BASE ====== */
 body {
     font-family: 'Inter', sans-serif;
@@ -132,13 +131,31 @@ h3 {
     border-radius: 10px;
 }
 
-/* ====== LISTS ====== */
-.card ul {
-    padding-left: 20px;
+/* ====== TEXT INSIDE CARD ====== */
+.card .content ul {
+    padding-left: 0;
+    list-style-type: none;
 }
-.card li {
-    margin-bottom: 10px;
+
+.card .content li {
+    line-height: 1.6;
+    text-align: justify;
+    color: #333;
     font-size: 1.1em;
+}
+
+/* ====== TITRES DANS LES CARTES ====== */
+.card .content h2 {
+    font-size: 1.8em;
+    color: #002c5f;
+    margin-bottom: 10px;
+}
+
+/* ====== IMAGE ADAPTÉE ====== */
+.card .image img {
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 /* ====== FOOTER ====== */
@@ -160,6 +177,9 @@ footer a:hover {
 @media (max-width: 768px) {
     .card {
         flex-direction: column;
+    }
+    .card .image img {
+        max-height: none;
     }
     .navbar {
         flex-wrap: wrap;
